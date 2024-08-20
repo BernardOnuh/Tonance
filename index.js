@@ -21,7 +21,7 @@ bot.start((ctx) => {
           [
             {
               text: "🌐 Open App",
-              web_app: { url: "https://learning-mini-bot.vercel.app/" },
+              web_app: { url: "https://example.com/how-to-play" },
             },
           ],
           [{ text: "💬 Join Community", url: "https://example.com/how-to-play" }],
