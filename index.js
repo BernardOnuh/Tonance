@@ -37,11 +37,3 @@ bot.start((ctx) => {
 });
 
 bot.launch();
-
-🌐 Tonance is the next generation of decentralized DeFi application on Telegram. A centralized exchange offering a cross-chain interoperability and liquidity transfer protocol that allows truly decentralized transfer of assets between various blockchains.
-
-💰 Tonance is offering universal token xBTON through gamification within a Telegram mini-app. Anyone can start mining xBTON tokens for free while completing campaigns. 
-
-Tap to mine, invite friends and earn together. 
-Make every hour count.
-
