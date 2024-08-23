@@ -21,7 +21,7 @@ bot.start((ctx) => {
           [{ text: "💬 Join Community", url: "https://example.com/how-to-play" },
             {
               text: "🌐 Open App",
-              web_app: { url: "https://example.com/how-to-play" },
+              web_app: { url: "https://tonance-app.vercel.app" },
             },
           ],
           [
