@@ -16,32 +16,28 @@ bot.start((ctx) => {
  Tap to mine, invite friends and earn together. 
 Make every hour count.`;
 
-  ctx.replyWithPhoto(
-    { url: "https://i.postimg.cc/0NzxJBPt/tonance.png" },
-    {
-      caption: message,
-      parse_mode: "HTML",
-      reply_markup: {
-        inline_keyboard: [
-          [
-            { text: "💬 Join Community", url: "https://example.com/how-to-play" },
-            {
-              text: "🌐 Open App",
-              web_app: { url: "https://tonance-app.vercel.app" },
-            },
-          ],
-          [
-            {
-              text: "How it Works",
-              url: "https://example.com/how-to-play"
-            },
-          ],
+  ctx.reply(message, {
+    parse_mode: "HTML",
+    reply_markup: {
+      inline_keyboard: [
+        [
+          { text: "💬 Join Community", url: "https://example.com/how-to-play" },
+          {
+            text: "🌐 Open App",
+            web_app: { url: "https://tonance-app.vercel.app" },
+          },
         ],
-      },
-    }
-  ).catch(error => {
-    console.error('Failed to send photo:', error);
-    ctx.reply('Sorry, an error occurred while trying to send the image.');
+        [
+          {
+            text: "How it Works",
+            url: "https://example.com/how-to-play"
+          },
+        ],
+      ],
+    },
+  }).catch(error => {
+    console.error('Failed to send message:', error);
+    ctx.reply('Sorry, an error occurred while trying to send the welcome message.');
   });
 });
 
