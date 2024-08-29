@@ -1,6 +1,7 @@
 const { Telegraf, Markup } = require("telegraf");
 const path = require("path");
-const axios = require("axios"); // Make sure to install axios: npm install axios
+const axios = require("axios"); // Ensure axios is installed: npm install axios
+const fs = require("fs");
 
 // Replace 'YOUR_BOT_TOKEN' with your actual bot token
 const bot = new Telegraf("7020450110:AAHtPfP9o7KPAWIrufoPjgG_4siRS8cyclc");
@@ -20,30 +21,40 @@ bot.start((ctx) => {
  Tap to mine, invite friends and earn together. 
 Make every hour count.`;
 
-  ctx.replyWithPhoto(
-    { source: imagePath("tonance.png") },
-    {
-      caption: message,
-      parse_mode: "HTML",
-      reply_markup: {
-        inline_keyboard: [
-          [
-            { text: "💬 Join Community", url: "https://example.com/how-to-play" },
-            {
-              text: "🌐 Open App",
-              web_app: { url: "https://tonance-app.vercel.app" },
-            },
+  // Check if the image file exists before trying to send it
+  const imgPath = imagePath("tonance.png");
+  if (fs.existsSync(imgPath)) {
+    ctx.replyWithPhoto(
+      { source: imgPath },
+      {
+        caption: message,
+        parse_mode: "HTML",
+        reply_markup: {
+          inline_keyboard: [
+            [
+              { text: "💬 Join Community", url: "https://example.com/how-to-play" },
+              {
+                text: "🌐 Open App",
+                web_app: { url: "https://tonance-app.vercel.app" },
+              },
+            ],
+            [
+              {
+                text: "How it Works",
+                url: "https://example.com/how-to-play"
+              },
+            ],
           ],
-          [
-            {
-              text: "How it Works",
-              url: "https://example.com/how-to-play"
-            },
-          ],
-        ],
-      },
-    }
-  );
+        },
+      }
+    ).catch(error => {
+      console.error('Failed to send photo:', error);
+      ctx.reply('Sorry, an error occurred while trying to send the image.');
+    });
+  } else {
+    console.error('Image not found at path:', imgPath);
+    ctx.reply('Sorry, the image could not be found.');
+  }
 });
 
 // Function to make API request
