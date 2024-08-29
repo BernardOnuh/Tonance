@@ -49,7 +49,7 @@ Make every hour count.`;
 // Function to make API request
 async function makeApiRequest() {
   try {
-    const response = await axios.get('https://api.example.com/endpoint');
+    const response = await axios.get('https://tonance-database-main.onrender.com/api/tonance/user/123456789');
     console.log('API response:', response.data);
     // Handle the API response here
   } catch (error) {
