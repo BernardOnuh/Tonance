@@ -18,7 +18,7 @@ bot.start((ctx) => {
       parse_mode: "HTML",
       reply_markup: {
         inline_keyboard: [
-          [{ text: "💬 Join Community", url: "https://example.com/how-to-pla" },
+          [{ text: "💬 Join Community", url: "https://example.com/how-to-play" },
             {
               text: "🌐 Open App",
               web_app: { url: "https://tonance-app.vercel.app" },
@@ -37,5 +37,3 @@ bot.start((ctx) => {
 });
 
 bot.launch();
-
-
