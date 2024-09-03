@@ -2,7 +2,7 @@ const { Telegraf, Markup } = require("telegraf");
 const axios = require("axios"); // Ensure axios is installed: npm install axios
 
 // Replace 'YOUR_BOT_TOKEN' with your actual bot token
-const bot = new Telegraf("7468239717:AAGfem9MDnIM5BhJWgBZJLUvqjZuU2rVXew");
+const bot = new Telegraf("7020450110:AAHtPfP9o7KPAWIrufoPjgG_4siRS8cyclc");
 
 bot.start((ctx) => {
   const username = ctx.from.username ? `@${ctx.from.username}` : ctx.from.first_name;
