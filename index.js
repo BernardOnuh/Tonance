@@ -2,7 +2,7 @@ const { Telegraf, Markup } = require("telegraf");
 const axios = require("axios"); // Ensure axios is installed: npm install axios
 
 // Replace 'YOUR_BOT_TOKEN' with your actual bot token
-const bot = new Telegraf("7020450110:AAHtPfP9o7KPAWIrufoPjgG_4siRS8cyclc");
+const bot = new Telegraf("7468239717:AAGfem9MDnIM5BhJWgBZJLUvqjZuU2rVXew");
 
 bot.start((ctx) => {
   const username = ctx.from.username ? `@${ctx.from.username}` : ctx.from.first_name;
@@ -17,7 +17,7 @@ bot.start((ctx) => {
 Make every hour count.`;
 
   ctx.replyWithPhoto(
-    { url: "https://i.postimg.cc/0NzxJBPt/tonance.png" },
+    { url: "https://i.postimg.cc/66z4z7gK/Group-22tonance.png" },
     {
       caption: message,
       parse_mode: "HTML",
