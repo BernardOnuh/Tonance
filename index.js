@@ -29,7 +29,7 @@ Make every hour count.`;
       reply_markup: {
         inline_keyboard: [
           [
-            { text: "💬 Join Community", url: "https://example.com/how-to-play" },
+            { text: "💬 Join Community", url: "https://t.me/tonanceexchange" },
             { text: "🌐 Open App", web_app: { url: "https://tonance-app.vercel.app" } }
           ]
         ]
